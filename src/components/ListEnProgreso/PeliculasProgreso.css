@@ -1,0 +1,103 @@
+.movieProgress{
+    width: 1300px;
+    margin: auto;
+}
+.movieProgress__container{
+    display: flex;
+    margin: auto;
+    width: 100%;
+
+}
+.movieProgress__cards{
+    width: 100%;
+    padding: 70px 0;
+    display: flex;
+    background-image: linear-gradient(#0b0c1196,#1a1717a4);
+    flex-direction: column;    
+}
+
+.movieProgress__card{
+    display: grid;
+    width: 95%;
+    grid-template-columns: 250px 3fr;
+    background-image: linear-gradient(#0b0c1196,#163f5273);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+.movieProgress__card-img{
+    display: flex;
+    max-width: 240px;
+    min-width: 240px;
+    max-height: 310px;
+    min-height: 310px;
+}
+
+.movieProgress__desc{
+    display: flex;
+    margin-left: 50px;
+    flex-direction: column;
+    width: 100%;
+}
+.movieProgress-desc-desc span{
+    width: 80%;
+}
+.movieProgress-img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    border-radius: 4px;
+    object-fit: cover;
+}
+.customitem{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    margin-top: 0px;
+    padding: 10px;
+    color: rgba(238, 238, 238, 0.836);
+    font-size: 20px;
+    transition: font-size 0.4s ease;
+}
+.customitem:hover{
+    font-size: 30px;
+    color: rgba(0, 255, 255, 0.726);
+}
+.movieProgress-duration span {
+    margin-left: 25px;
+}
+.movieProgress__desc p {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+.movieProgress__desc p span{
+    display: flex;  
+    color: rgb(107, 105, 105);
+}
+
+.movieProgress__button{
+    width: 30%;
+    margin-top: 20px;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.movieProgress__button:hover{
+    background-color: #ffffffbb;
+}
+
+.customButton{
+    display: flex;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: -37px;
+    font-size: 30px;
+    z-index: 1000;
+    color: black;
+
+}

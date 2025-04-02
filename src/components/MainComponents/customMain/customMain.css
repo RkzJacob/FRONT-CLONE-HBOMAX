@@ -1,0 +1,213 @@
+/*------------------------MAIN-----------------------------*/
+
+.main__container{
+    position: relative;
+    display: flex;
+    background: transparent;
+    flex-direction: column;
+    width: 100%;  
+}
+
+.main__slider{
+    margin: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;  
+}
+/*------------------BLOQUE IMG BACKGROUND ------------------*/
+.main__background-container{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.main__slider-img{
+    position: relative;
+    opacity: 0.5;
+    object-fit: cover;
+    width: 100%;
+    height: 600px;
+    top: 0;
+    left: -100%;
+    z-index: 0;
+    transition: transform 1s ease-in-out;
+    
+}
+
+.main__background-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;  
+    height: 40%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #0a0a0a 95%);
+    pointer-events: none; 
+    z-index: 1;
+}
+/*------------------BLOQUE IMG BACKGROUND ENDS------------------*/
+.main__list{
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    gap: 10px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    align-items: start;
+    margin-left: 3.5rem;
+    margin-top: -20rem;
+}
+.main__list-item{
+    text-align: justify;
+    font-size: 1.1em;
+    display: flex;
+}
+.main__list-item p{
+    padding: 0;
+    margin: 0;
+}
+.main__list-item .banner{
+    object-fit: contain;
+    width: max-content;
+    height: 140px;
+}
+
+.main__list-item a{
+    margin: auto;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #555555;
+    color: #000000;
+    padding: 15px 90px;
+    border-radius: 7px;
+    font-size: 20px;
+    width: 200px;
+    text-align: center;
+    font-family: inherit;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.main__list-item a:hover{
+    background-color: rgba(255, 255, 255, 0.692);
+    text-decoration-style: none;
+}
+
+
+@media  (max-width: 1200px) {
+    .main__slider-img {
+        height: 600px;
+    }
+    .main__list {
+        margin-left: 6rem;
+        margin-top: -15rem;
+        width: 500px;
+    }
+    .main__list-item a {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 960px) {
+    .main__slider-img {
+        height: 500px;
+    }
+    .main__list {
+        margin-left: 10px;
+        margin-top: -12rem;
+        width: 500px;
+    }
+    .main__list-item {
+        font-size: 1em;
+    }
+    .main__list-item .banner {
+        height: 120px;
+    }
+    .main__list-item a {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+}
+
+@media  (max-width: 768px) {
+    .main__slider-img {
+        width: 900px;
+        height: 400px;
+    }
+    .main__list {
+        margin-left: 2rem;
+        margin-top: -10rem;
+        width: 500px;
+        gap: 8px;
+    }
+    .main__list-item {
+       
+        font-size: 0.9em;
+    }
+    .main__list-item .banner {
+        height: 100px;
+    }
+    .main__list-item a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
+
+@media  (max-width: 576px) {
+    
+    .main__slider-img {
+        height: 500px;
+        width: 700px;
+    }
+    .main__list {
+        margin-top: -8rem;
+        gap: 6px;
+        width: 400px;
+        margin-left: 0.5rem;
+    }
+    .main__list-item {
+        font-size: 0.9em;
+    }
+    .main__list-item .banner {
+        height: 80px;
+    }
+    .main__list-item a {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+    .main__list-item a{
+        font-size: 1.3rem;
+        font-weight: bold;
+        
+    }
+}
+@media (max-width: 450px) {
+    
+    .main__slider-img {
+        height: 500px;
+        width: 500px;
+    }
+    .main__list {
+        margin-top: -8rem;
+        gap: 6px;
+        width: 220px;
+        margin-left: 1.1rem;
+    }
+    .main__list-item {
+        font-size: 0.7em;
+    }
+    .main__list-item .banner {
+        height: 80px;
+    }
+    .main__list-item a {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}

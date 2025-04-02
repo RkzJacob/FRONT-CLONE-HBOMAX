@@ -1,0 +1,16 @@
+body{
+  margin: 0;
+  background: #0a0a0a;
+  font-weight: bold;
+  color: #fff;
+}
+body,div,h2,nav,h1,h3{
+  box-sizing: border-box;
+}
+
+a,li,ul{
+  text-decoration: none;
+  list-style-type: none;
+  color: #fff;
+  
+}

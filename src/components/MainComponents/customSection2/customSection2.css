@@ -1,0 +1,108 @@
+/*-------------------SECTION CONTINUE WATCHING------------------------*/
+.continue-watching__container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 20px 0;
+    margin-bottom: 90px;
+    
+}
+.continue-watching__title{
+    width: 100%;
+    margin-left: 6rem;
+    font-size: 1.2rem;
+}
+.continue-watching__cards{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin: auto;
+    margin-left: 6rem;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.continue-watching__card{
+    justify-content: center;
+    align-items: center;
+    min-width: 270px;
+    max-width: 270px;
+    max-height: 155px;
+    min-height: 155px;
+    border-radius: 2px;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    padding: 4px;
+    transition: border 0.2s ease-in-out;
+}
+
+.continue-watching__desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+.continue-watching__desc p{
+    margin: 0;
+    padding: 0;
+}
+.continue-watching__card-img{
+    display: flex;
+    opacity: 1;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.continue-watching__card:hover{
+    border-color:  #fff;
+}
+
+.progress-container{
+    position: absolute;
+    transform: translateY(-280%);
+    z-index: -1;
+   
+}
+.continue-watching__overlay {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.continue-watching__overlay i{
+    font-size: 5rem;
+    position: absolute;
+    transition: opacity 0.3s ease;
+    top: 2rem;
+    color: #ffffffc7;
+    z-index: 1;
+    left: 6rem;
+    transition: font-size 0.1s ease-in-out, top 0.1s ease;
+}
+.continue-watching__overlay:hover i{
+    font-size: 5.1rem;
+    top: 2rem;
+    color: rgba(0, 255, 255, 0.863);
+}
+.continue-watching__overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Filtro gris semitransparente */
+    z-index: 1;
+}
+.progress-container progress{
+    position: relative;
+    transform: translateY(18%);
+    width: 258px; 
+}
