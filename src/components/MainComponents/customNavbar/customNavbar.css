@@ -66,7 +66,7 @@
 }
 
 /***********************************************lista bajable */
-.dropdown__list {
+.dropdown__list-2{
     display: none; /* Ocultar el submenú por defecto */
     position: absolute;
     top: 110%; /* Posiciona el menú debajo del botón "Movies" */
@@ -80,24 +80,25 @@
     border-radius: 5px;
 }
 
-.nav__dropdown .dropdown__list li {
+.nav__dropdown .dropdown__list-2 li {
     padding: 10px 20px;
     white-space: nowrap;
 }
 
-.nav__dropdown .dropdown__list li a {
+.nav__dropdown .dropdown__list-2 li a {
     color: white;
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s ease;
 }
 
-.nav__dropdown .dropdown__list li a:hover {
+.nav__dropdown .dropdown__list-2 li a:hover {
     color: #f39c12; /* Color destacado al pasar el mouse */
 }
 
-
-
+.nav__dropdown:hover .dropdown__list-2 {
+    display: block; /* Mostrar el submenú al pasar el mouse sobre "Movies" */
+}
 
 
  /*---------------------------------------------------------*/

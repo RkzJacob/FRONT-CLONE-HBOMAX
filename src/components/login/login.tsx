@@ -8,8 +8,8 @@ import Cookies from 'js-cookie';
 
 
 export const Login = ()=>{
-    const [nombreUsuario,setNombreUsuario] = useState('');
-    const [contrasena,setContrasena] = useState('');
+    const [nombreUsuario,setNombreUsuario] = useState('jacobpro');
+    const [contrasena,setContrasena] = useState('weones89');
     const [login,{loading }] = useMutation(LOGIN_MUTATION);
    
 

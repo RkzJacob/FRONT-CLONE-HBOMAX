@@ -15,6 +15,24 @@ export const CustomMainSlier = () =>{
 
     const lista_peliculas=data?.GET_PELICULA_BY_GENRE || [];
 
+    useEffect(() => {
+        // Al montarse por primera vez, carga la primera imagen con animación
+        if (!imageRefCurrent.current || lista_peliculas.length === 0) return;
+
+        const current = imageRefCurrent.current;
+        current.src = lista_peliculas[0].banner;
+        current.style.zIndex = '2';
+        current.style.opacity = '0';
+
+        gsap.to(current, {
+            opacity: 0.5,
+            x: 0,
+            duration: 1,
+            ease: 'power2.out'
+        });
+
+}, [lista_peliculas.length]);
+
     useEffect(()=>{
         const interval = setInterval(()=>{
 
@@ -24,6 +42,8 @@ export const CustomMainSlier = () =>{
         return () => clearInterval(interval);
 
     },[lista_peliculas.length]);
+
+    
 
     useEffect(()=>{
         if (!imageRefCurrent.current || !imageRefNext.current) return;
@@ -38,12 +58,14 @@ export const CustomMainSlier = () =>{
         next.style.zIndex = '2';
         current.style.zIndex = '1';
 
+        gsap.to(current, { x: '100%', opacity: 0.5, duration: 0.1, ease: 'power2.in' });
+
         gsap.fromTo(next,
             {opacity: 0 ,x:100},
             {opacity:0.5 , x:0 , duration:0.3 , ease:"power2.out"}
         );
 
-        gsap.to(current, { x: '-100%', opacity: 0, duration: 1, ease: 'power2.in' });
+       
 
         gsap.fromTo(items,
             { x: -500, opacity: 0 },

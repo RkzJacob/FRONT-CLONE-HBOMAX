@@ -15,12 +15,9 @@ export const CustomNavbar = () =>{
                         <li className="nav__item">
                         <Link to={`/Main`} ><p>Home</p></Link>
                         </li >
-                        <li className="nav__item">
-                            <a href="#"><p>Series</p></a>
-                        </li>
                         <li className="nav__item nav__dropdown">
                             <a href="#"><p>Movies</p></a>
-                            <ul className="dropdown__list">
+                            <ul className="dropdown__list-2">
                                 <li><Link to={`/peliculas/filter/categoria/1`}>Ficción</Link></li>
                                 <li><Link to={`/peliculas/filter/categoria/2`}>Comedia</Link></li>
                                 <li><Link to={`/peliculas/filter/categoria/3`}>Drama</Link></li>
