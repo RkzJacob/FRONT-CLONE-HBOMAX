@@ -9,7 +9,7 @@ export const PeliculaCategoriaFilter = ()=>{
 
     const id_categoria_string = id_categoria || "";
 
-    const {data,loading,error} = useMovieGenres(id_categoria_string);
+    const {data} = useMovieGenres(id_categoria_string);
 
     return (
         <section className='PeliculasCategorias'>

@@ -19,7 +19,7 @@ const schema = z.object({
 type FormValues = z.infer<typeof schema>;
 
 export const Register = () =>{
-    const [createUser,{loading ,error}] = useMutation(REGISTER_MUTATION);
+    const [createUser,{loading }] = useMutation(REGISTER_MUTATION);
     const {control,handleSubmit,formState:{errors}} = useForm<FormValues>({
         resolver:zodResolver(schema),
         mode:"onBlur",

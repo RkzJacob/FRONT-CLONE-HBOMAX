@@ -12,7 +12,7 @@ export const CustomSection2 = ({name}: nameCategorie) =>{
     const id_usuario_storage = localStorage.getItem("nombre_usuario");
     const {data:dataUser} = useUserByName(id_usuario_storage || "");
     const usuario = dataUser?.GetOneFindUser.id_usuario || "";
-    const {data,loading,error} = userProgressMovies(usuario)
+    const {data} = userProgressMovies(usuario)
 
 
     return(

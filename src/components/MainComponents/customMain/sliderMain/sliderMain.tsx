@@ -5,7 +5,7 @@ import  './sliderMain.css'
 import { Link } from 'react-router-dom';
 
 export const CustomMainSlier = () =>{
-    const {data,loading,error} = useMovieGenres("3"); 
+    const {data} = useMovieGenres("3"); 
     const [currentIndex , setCurrentIndex] = useState(0);
     const cardsContainerRef = useRef<HTMLImageElement>(null);
 
