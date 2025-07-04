@@ -44,6 +44,7 @@ export const Login = ()=>{
             });
           }
           Cookies.set("time_video_player","")
+          localStorage.setItem("nombre_usuario", nombreUsuario);
           navigate("/main");
         } catch (err) {
           console.error(err);
