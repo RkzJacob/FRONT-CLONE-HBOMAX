@@ -96,10 +96,7 @@
     color: #f39c12; /* Color destacado al pasar el mouse */
 }
 
-/* Mostrar el submenú cuando se pasa el cursor */
-.nav__dropdown:hover .dropdown__list {
-    display: block;
-}
+
 
 
 

@@ -1,5 +1,5 @@
 
 
-.slide-right{
-    transform: translateX(100%);
+.main__slider-img .slide-right{
+    transform: translateX(-100%);
 }

@@ -57,7 +57,7 @@ export const CustomSection: React.FC<CustomSectionProps> = ({name_section,id_gen
                             data?.GET_PELICULA_BY_GENRE.map((pelicula)=>(
                             <div className="recommend__card" key={pelicula.id_pelicula}>
                                 <Link to={`/peliculas_watch/${pelicula.id_pelicula}`} >
-                                <img src={pelicula.portada } alt="" className="recommend__card-img"/>
+                                    <img src={pelicula.portada } alt="" className="recommend__card-img"/>
                                 </Link>
                                 <div className="recommend__card-titles">
                                     <h1>{pelicula.titulo}</h1>

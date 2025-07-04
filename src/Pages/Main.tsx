@@ -10,8 +10,8 @@ export function Main (){
         <>
           <CustomNavbar/>
           <CustomMain/>
-          <CustomSection name_section='Recommend For you' id_genero="1"/>
-          <CustomSection2 name='New Releases'/>
-          <CustomSection name_section='xd' id_genero="4"/>
+          <CustomSection name_section='Recomendado para ti' id_genero="1"/>
+          <CustomSection2 name='Vistas recientemente'/>
+          <CustomSection name_section='Ciencia ficción' id_genero="4"/>
           </>
           )}
