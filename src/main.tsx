@@ -6,7 +6,7 @@ import { ApolloClient,ApolloProvider,HttpLink, InMemoryCache } from '@apollo/cli
 const client = new ApolloClient({
   cache:new InMemoryCache(),
   link: new HttpLink({
-    uri: "http://localhost:3000/api",
+    uri: "https://graph-hbomax-production.up.railway.app/api",
     credentials: 'include'
   })
 })

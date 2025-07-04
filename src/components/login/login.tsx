@@ -10,7 +10,9 @@ import Cookies from 'js-cookie';
 export const Login = ()=>{
     const [nombreUsuario,setNombreUsuario] = useState('');
     const [contrasena,setContrasena] = useState('');
-    const [login,{loading ,error}] = useMutation(LOGIN_MUTATION);
+    const [login,{loading }] = useMutation(LOGIN_MUTATION);
+   
+
     const client = useApolloClient();
     const navigate = useNavigate();
 
@@ -22,7 +24,8 @@ export const Login = ()=>{
             variables: {nombre_usuario: nombreUsuario, contrasena:contrasena },
           });
 
-          if (data?.login) {
+          if (data) {
+            localStorage.setItem("token", data.LOGIN_USER.token);
             // Actualizar el cache de Apollo con el nombre del usuario
             client.writeQuery({
               query: gql`
@@ -41,7 +44,6 @@ export const Login = ()=>{
             });
           }
           Cookies.set("time_video_player","")
-          localStorage.setItem("nombre_usuario", nombreUsuario);
           navigate("/main");
         } catch (err) {
           console.error(err);

@@ -21,7 +21,7 @@ function App() {
         <Route path="/" element={<Login/>}/>
         <Route path="/peliculas_watch/:id_pelicula" element={<PrivateRoute><Peliculas/></PrivateRoute>}/>
         <Route path="/video/:id_pelicula/" element={<PrivateRoute><VideoPlayer/></PrivateRoute>}/>
-        <Route path='/Main' element={<PrivateRoute><Main/></PrivateRoute> }/>
+        <Route path='/main' element={<PrivateRoute><Main/></PrivateRoute> }/>
         <Route path='/Progress-peliculas-user' element={<PrivateRoute><PageProgresoPeliculas/></PrivateRoute> }/>
         <Route path="/peliculas/filter/categoria/:id_categoria" element={<PrivateRoute><PeliculaCategoria/></PrivateRoute>}/>
         <Route path="/peliculas/favoritas/" element={<PrivateRoute><PagePeliculasFavoritas/></PrivateRoute>}/>

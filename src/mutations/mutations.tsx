@@ -8,7 +8,8 @@ export const CREATE_PROGRESO = gql`
 
 export const LOGIN_MUTATION = gql`
     mutation Login($nombre_usuario: String!, $contrasena: String!){
-    login(nombre_usuario: $nombre_usuario, contrasena: $contrasena)
+    LOGIN_USER(nombre_usuario: $nombre_usuario, contrasena: $contrasena){
+    token}
     }
 
 `
